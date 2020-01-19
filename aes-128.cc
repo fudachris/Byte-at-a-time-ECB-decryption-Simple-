@@ -98,10 +98,6 @@ CreateDictionaryUnknownString (int bs)
     KeyType kt = KeyType (key);
     std::vector<HexType> ks = kt.GetKeySchedule();
 
-    //random multiplier of 3, therefor 3 16 byte blocks are formed
-    //the +1  will force the pkcs#7 to pad the string
-    //pkcs7 pads the string with know values
-    //the know values will be used to construct a dictionary of the encryption output
     int str_len = bs; 
     std::string a = "";
 
